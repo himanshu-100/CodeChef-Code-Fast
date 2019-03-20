@@ -7,16 +7,20 @@
 var rule2={
 	conditions: [
 		new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {hostEquals: 'developer.chrome.com'},
-
-        }),
-		new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {hostEquals: 'www.codechef.com'},
+          pageUrl: {hostContains: 'codechef'},
 
         }),
         new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {hostEquals: 'codeforces.com'},
-          
+          pageUrl: {hostContains: 'codeforces'},
+
+        }),
+        new chrome.declarativeContent.PageStateMatcher({
+          pageUrl: {hostContains: 'google'},
+
+        }),
+        new chrome.declarativeContent.PageStateMatcher({
+          pageUrl: {hostContains: 'hackerrank'},
+
         })
     ],
     actions: [new chrome.declarativeContent.ShowPageAction()]
