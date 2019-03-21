@@ -22,5 +22,11 @@
       "48": "images/get_started48.png",
       "128": "images/get_started128.png"
     },
+    "content_scripts": [
+   		{
+      		"matches": ["https://www.codechef.com/rankings/*A","https://www.codechef.com/rankings/*B"],
+      		"js": ["contentScript.js"]
+    	}
+    ],
     "manifest_version": 2
 }
